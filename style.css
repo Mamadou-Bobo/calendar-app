@@ -14,14 +14,31 @@ body{
     height: 390px;
 }
 
-.container{
+.container{  
     background-color: #dddd;
     color: #fff;
     border-radius: 5px;    
 }
 
 .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     margin: 0 20px 0 20px;
+}
+
+.content h2{
+    font-size: 9px;
+}
+
+.content h3{
+    text-align: center;
+    font-size: 8px;
+}
+
+.content h2, h3{
+    color: #333;
 }
 
 .month_year{
@@ -45,24 +62,6 @@ body{
     padding-right: 15px;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.content h2{
-    font-size: 9px;
-}
-.content h3{
-    text-align: center;
-    font-size: 8px;
-}
-
-.content h2, h3{
-    color: #333;
-}
-
 .fa-angle-right,
 .fa-angle-left{
     font-size: 40px;
@@ -77,65 +76,36 @@ body{
 
 @media only screen and (min-width: 320px) {
     .container{
-        margin: 0 20px 0 20px;
+        width: 100%;
     }
 
     .content h2{
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .content h3{
-        font-size: 6px;
+        font-size: 15px;
     }
 
     .month_year h1{
-        font-size: 10px;
+        font-size: 25px;
     }
 }
 
 @media only screen and (min-width: 425px) {
-    .container{
-        margin: 0 30px 0 30px;
-    }
-
     .content h2{
-        font-size: 10px;
-    }
-
-    .content h3{
-        font-size: 9px;
-    }
-
-    .month_year h1{
-        font-size: 15px;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .container{
-        margin: 0 50px 0 50px;
-    }
- 
-    .content h2{
-        font-size: 14px;
-    }
-    
-    .content h3{
         font-size: 13px;
     }
-    
-    .month_year h1{
-        font-size: 20px;
-    }
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 600px) { 
     .container{
-        margin: 0 70px 0 70px;
+        width: 90%;
+        margin: 0 5% 0 5%;
     }
- 
+
     .content h2{
-        font-size: 16px;
+        font-size: 17px;
     }
     
     .content h3{
@@ -143,16 +113,11 @@ body{
     }
     
     .month_year h1{
-        font-size: 25px;
-    } 
+        font-size: 30px;
+    }
 }
 
-
-@media only screen and (min-width: 1024px) {
-    .container{
-        margin: 0 200px 0 200px;
-    }
- 
+@media only screen and (min-width: 1024px) { 
     .content h2{
         font-size: 18px;
     }
@@ -165,8 +130,3 @@ body{
         font-size: 30px;
     }
 }
-
-
-
-
-
