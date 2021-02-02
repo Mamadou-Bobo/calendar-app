@@ -41,7 +41,8 @@ const saturday = document.getElementById("saturday");
 const sunday = document.getElementById("sunday");
 
 let date = new Date();
-let daysNumber = getNumberOfDays(date.getMonth());
+let daysNumber = getNumberOfDays(date.getMonth(),date.getFullYear());
+// console.log(daysNumber);
 
 let month = date.getUTCMonth();
 let year = date.getUTCFullYear();
@@ -137,7 +138,7 @@ function displayDate() {
     }
 }
 
-function getNumberOfDays(month) {
+function getNumberOfDays(month,year) {
 
     let daysNumber;
   
@@ -205,14 +206,14 @@ function showDays() {
     let count = 1;
     let begin = getFirstDay();
 
-    for (let j = 0; j < getNumberOfDays(month); j++) {
+    for (let j = 0; j < getNumberOfDays(month,year); j++) {
         let element_id = count++;
         begin++;
         document.getElementById("div"+begin).innerText = element_id;
         document.getElementById("div"+begin).style.opacity = "1";
     } 
     
-    let lastDays = getNumberOfDays(month-1);
+    let lastDays = getNumberOfDays(month-1,year);
 
     let lastDaysCount = 0;
     
@@ -225,7 +226,7 @@ function showDays() {
 
     let firstDays = 1;
 
-    for(let k = getNumberOfDays(month)+1+lastDaysCount; k <= 42; k++) {
+    for(let k = getNumberOfDays(month,year)+1+lastDaysCount; k <= 42; k++) {
         document.getElementById("div"+k).innerText = firstDays;
         document.getElementById("div"+k).style.opacity = ".6";
         firstDays++;
